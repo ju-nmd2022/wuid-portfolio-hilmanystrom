@@ -1,0 +1,21 @@
+img{
+    width: 300px;
+    height: 400px;
+}
+
+p{
+    flex-direction: row;
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+ header{
+    font-weight: 400px;
+ }
+
+body{
+
+    background-color:teal
+}

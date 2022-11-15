@@ -81,3 +81,19 @@ div{
 
 }
 
+nav{
+    background-color: aliceblue;
+    padding: 0.5rem;
+}
+
+nav a {
+    font-family: 'Times New Roman';
+    font-size: medium;
+    font-weight: 150;
+    color: black;
+    text-decoration: none;
+}
+
+nav a.active{
+    color: aquamarine;
+}

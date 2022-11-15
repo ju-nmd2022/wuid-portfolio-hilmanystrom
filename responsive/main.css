@@ -1,0 +1,97 @@
+
+
+body{
+    background-color:pink;
+}
+
+
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    font-family: 'Times New Roman', Times;
+    font-size: x-large;
+    background-color: lightblue;
+}
+
+#wrap{
+    flex-direction: row;
+    display: flex;
+
+    justify-content: center;
+    justify-content: space-evenly;
+    
+    align-items: center;
+}
+
+h2{
+   
+    width: 200px;
+    font-size: small;
+    font-family: 'Times New Roman';
+    font-weight: 150;
+}
+
+h3{
+   
+    width: 200px;
+    font-size: medium;
+    font-family: 'Times New Roman';
+    font-weight: 150;
+}
+
+img{
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 220px;
+    height: 350px;
+}
+
+
+
+
+@media screen and (min-width: 441px) and (max-width: 800px) {
+    body{
+        background-color: cadetblue;
+    }
+    #wrap{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        flex-direction: row;
+    }
+   img{
+    grid-template-rows: 1fr;
+grid-template-columns: 1fr 1fr;
+   }
+}
+
+nav{
+    background-color: aliceblue;
+    padding: 0.5rem;
+}
+
+nav a {
+    font-family: 'Times New Roman';
+    font-size: medium;
+    font-weight: 150;
+    color: black;
+    text-decoration: none;
+}
+
+nav a.active{
+    color: aquamarine;
+}
+
+@media screen and (max-width: 440px) {
+
+    #wrap{
+    display: grid;
+    grid-template-rows: 1fr;
+    flex-direction: row;
+    }
+}
+
