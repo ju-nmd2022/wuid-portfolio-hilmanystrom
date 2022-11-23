@@ -23,6 +23,8 @@ const ikeaman = "ikea-man.jpeg";
 const confusedIkea = "confusedikea.jpeg";
 const kompis = "friend.jpeg";
 const kompisar = "ikeafriend.png";
+const stol = "chair.jpeg";
+const trasigstol = "brokenchair.jpeg";
 const hammer = document.getElementById("hammer");
 const change = document.getElementById("confused");
 const friend = document.getElementById("friend");
@@ -30,6 +32,9 @@ const two = document.getElementById("two");
 const lockBox = document.getElementById("lockbox");
 const gateTextinfo = document.getElementById("gateTextInfo");
 const uppertext = document.getElementById("text");
+const button = document.getElementById("button");
+const chair = document.getElementById("chair");
+const brokenchair = document.getElementById("brokenchair");
 
 const errorMessage = document.getElementById("guide");
 
@@ -40,11 +45,20 @@ hideFriend();
 showHammer();
 hideTwo();
 hidegateTextInfo();
+hideButton();
+hideChair();
+hideBrokenchair();
+
 
 
 
 let hasTwo = false;
 showTwo
+showButton
+
+let hasChair = false;
+let hasBrokenchair = false;
+
 
 
 
@@ -76,6 +90,7 @@ hammer.addEventListener("click", function () {
         showFriend();
         showGateTextinfo();
         hideText();
+        hideButton();
         return;
     }
 })
@@ -113,6 +128,7 @@ friend.addEventListener("click", function (){
         showTwo();
         hideFriend();
         hidegateTextInfo();
+        showButton();
         
     }
 
@@ -146,4 +162,59 @@ function hideText(){
 
 function showText(){
     text.style.display = "flex";
+}
+
+function hideButton(){
+    button.hidden = true;
+}
+
+function showButton (){
+    button.hidden = false;
+}
+
+button.addEventListener("click", function () {
+    let rand = Math.floor(Math.random() * 2) + 1;
+    if (rand == 2){
+        hasBrokenchair = true;
+        showBrokenchair();
+        hideChair();
+        hideButton();
+        showRandomscreen();
+        showBrokenchair(
+           "Oh no, the chair wasn't built correctly and is now broken..."
+        );
+    } else {
+        hasChair = true;
+        showChair();
+        hideBrokenchair();
+        hideButton();
+        hideRandomscreen();
+        showChair(
+            "Good job! The chair was built correctly!"
+        );
+    
+    }
+});
+
+
+function hideChair(){
+    chair.hidden = true;
+    
+}
+
+function showChair(){
+    if (hasChair){
+    chair.hidden = false;
+    }
+}
+
+function hideBrokenchair(){
+    brokenchair.hidden = true;
+    
+}
+
+function showBrokenchair(){
+    if (hasBrokenchair){
+    brokenchair.hidden = false;
+    }
 }

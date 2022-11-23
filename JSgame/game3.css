@@ -35,10 +35,12 @@ span{
     justify-content: center;
 }
 #gateTextInfo{
-    font-size: 1cm;
+    position: absolute;
+    font-size: 0.9cm;
     background-color: rgb(00, 51, 153);
     display: flex;
     justify-content: center;
+  
 }
 
 aside{
@@ -67,11 +69,10 @@ aside{
     
 #friend{
     position: absolute;
-    width: 40px;
-    height: 50px;
-    height: 80px;
-    top: 560px;
-    right: 80px;
+    width: 20px;
+    height: 40px;
+    top: 295px;
+    right: 24px;
 }
 
 p{
@@ -81,6 +82,39 @@ p{
     font-size: xx-large;
     bottom: 350px;
     right: 100px;
-    
-
 }
+
+#button{
+    position: absolute;
+   height:70px;
+   width: 120px;
+   border-color: black;
+   background-color: rgb(255, 204, 00);
+   font-weight: 600;
+   font-size: 0.3cm;
+   bottom: 50px;
+   left: 590px;
+}
+
+#chair{
+    position: absolute;
+    width: 180px;
+    height: 210px;
+    bottom: 60px;
+    left: 240px;
+}
+
+#brokenchair{
+    position: absolute;
+    width: 180px;
+    height: 210px;
+    bottom: 60px;
+    left: 240px;
+}
+
+/* main{
+    position:absolute;
+    bottom: 300px;
+    height: 100px;
+    background-color: rgb(255, 204, 00);
+} */
