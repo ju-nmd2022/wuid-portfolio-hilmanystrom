@@ -1,0 +1,86 @@
+body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/463/682/non_2x/warehouse-aisle-in-an-ikea-store-free-photo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+img{
+    width:100px;
+    height:100%;
+}
+
+.man{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    bottom: 90px;
+    right: 300px;
+}
+
+#hammer{
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    left: 10px;
+    bottom: 0px;
+}
+
+span{
+    font-size: 1cm;
+    background-color: rgb(00, 51, 153);
+    display: flex;
+    justify-content: center;
+}
+#gateTextInfo{
+    font-size: 1cm;
+    background-color: rgb(00, 51, 153);
+    display: flex;
+    justify-content: center;
+}
+
+aside{
+    font-size: x-large;
+    background-color: rgb(255, 204, 00);
+    display: flex;
+    justify-content: center;
+
+}
+
+#confused{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    bottom: 90px;
+    right: 300px;
+}
+
+#two{
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    bottom: 90px;
+    right: 280px;
+}
+    
+#friend{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    height: 80px;
+    top: 560px;
+    right: 80px;
+}
+
+p{
+    position: absolute;
+    background-color: rgb(255, 204, 00);
+    width: 340px;
+    font-size: xx-large;
+    bottom: 350px;
+    right: 100px;
+    
+
+}

@@ -6,7 +6,7 @@
     display: flex;
     justify-content:center;
     font-size: xx-large;
-margin-left: 300px;
+margin-left: 200px;
 margin-bottom: 10px;
  
 }
@@ -101,3 +101,32 @@ nav a {
 nav a.active{
     color: aquamarine;
 }
+
+.picture {
+    animation-name: bounce;
+    animation-duration: 3.5s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
+    transform-origin: center bottom;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(-60vh) scaleX(0.7) scaleY(1.3);
+    }
+    40% {
+      transform: scaleX(0.7) scaleY(1.3);
+    }
+    /* 48% {
+      transform: translateY(0px) scaleX(2) scaleY(0.2);
+    } */
+    56% {
+      transform: scaleX(0.7) scaleY(1.2);
+    }
+    64% {
+      transform: scaleX(1.3) scaleY(0.8);
+    }
+    70% {
+      transform: translateY(0px) scaleX(1) scaleY(1);
+    }
+  }

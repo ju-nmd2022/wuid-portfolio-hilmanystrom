@@ -97,3 +97,28 @@ nav a {
 nav a.active{
     color: aquamarine;
 }
+
+.content:hover {
+    animation-name: crazy-headline;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: backwards,
+
+  }
+  
+  @keyframes crazy-headline {
+    0% {
+      background-color: #de64de;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      background-color: #9c75db;
+      color: beige;
+      transform: scale(2) rotate(360deg);
+    }
+    100% {
+      background-color: #0087ba;
+      transform: scale(1) rotate(0deg);
+    }
+  }
