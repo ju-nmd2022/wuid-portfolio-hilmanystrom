@@ -32,12 +32,13 @@ const two = document.getElementById("two");
 const lockBox = document.getElementById("lockbox");
 const gateTextinfo = document.getElementById("gateTextInfo");
 const uppertext = document.getElementById("text");
-const button = document.getElementById("button");
+const randomButton = document.getElementById("button");
 const chair = document.getElementById("chair");
 const brokenchair = document.getElementById("brokenchair");
+const gameover = document.getElementById("gameover")
+const gamefinished = document.getElementById("gamefinished");
 
-const errorMessage = document.getElementById("guide");
-
+const hamer = "hammer";
 
 let hasHammer = false;
 hideMan();
@@ -45,22 +46,32 @@ hideFriend();
 showHammer();
 hideTwo();
 hidegateTextInfo();
-hideButton();
+hideRandomButton();
 hideChair();
 hideBrokenchair();
-
-
-
+hideGameover();
+hideGamefinished();
 
 let hasTwo = false;
 showTwo
-showButton
-
-let hasChair = false;
-let hasBrokenchair = false;
+showRandomButton
 
 
 
+randomButton.addEventListener("click", function () {
+    rand = Math.floor(Math.random() * 2) + 1;
+   if (rand === 2) {
+       showBrokenchair();
+       showGameover();
+       hideChair();
+       hideGamefinished();
+       } else {
+       showChair();
+       showGamefinished();
+       hideBrokenchair();   
+       hideGameover();
+   }
+});
 
 
 function hideHammer(){
@@ -70,8 +81,7 @@ function hideHammer(){
 function showHammer(){
     if (hasHammer) {
         hammer.hidden = false;
-}
-}
+}}
 
 function changePicture() {
     if (hasHammer){
@@ -86,6 +96,7 @@ hammer.addEventListener("click", function () {
     if (!hasHammer) {
         hasHammer = true;
         hideHammer();
+        saveSession();
         changePicture();
         showFriend();
         showGateTextinfo();
@@ -128,17 +139,14 @@ friend.addEventListener("click", function (){
         showTwo();
         hideFriend();
         hidegateTextInfo();
-        showButton();
+        showRandomButton();
         
     }
-
-}
-)
+})
 
 LockBox.addEventListener("click", function() {
     showGateTextinfo();
-}
-)
+})
 
 function hidegateTextInfo(){
     gateTextinfo.style.display = "none";
@@ -164,57 +172,61 @@ function showText(){
     text.style.display = "flex";
 }
 
-function hideButton(){
+function hideRandomButton(){
     button.hidden = true;
 }
 
-function showButton (){
+function showRandomButton (){
     button.hidden = false;
 }
 
-button.addEventListener("click", function () {
-    let rand = Math.floor(Math.random() * 2) + 1;
-    if (rand == 2){
-        hasBrokenchair = true;
-        showBrokenchair();
-        hideChair();
-        hideButton();
-        showRandomscreen();
-        showBrokenchair(
-           "Oh no, the chair wasn't built correctly and is now broken..."
-        );
-    } else {
-        hasChair = true;
-        showChair();
-        hideBrokenchair();
-        hideButton();
-        hideRandomscreen();
-        showChair(
-            "Good job! The chair was built correctly!"
-        );
-    
-    }
-});
+function hideRandomButton(){
+    randomButton.hidden = true;
+}
 
+function showRandomButton(){
+    randomButton.hidden = false;
+}
 
-function hideChair(){
+function hideChair() {
     chair.hidden = true;
-    
 }
 
-function showChair(){
-    if (hasChair){
-    chair.hidden = false;
-    }
+function showChair() {
+    chair.hidden = false; 
 }
 
-function hideBrokenchair(){
-    brokenchair.hidden = true;
-    
+function hideBrokenchair() {
+    brokenchair.hidden = true;    
 }
 
-function showBrokenchair(){
-    if (hasBrokenchair){
+function showBrokenchair() {
     brokenchair.hidden = false;
-    }
 }
+
+function hideGameover() {
+    gameover.hidden = true;
+}
+
+function showGameover() {
+    gameover.hidden = false;
+}
+
+function hideGamefinished() {
+    gamefinished.hidden = true;
+}
+
+function showGamefinished() {
+    gamefinished.hidden = false;
+}
+
+function saveSession() {
+    sessionStorage.setItem(hamer, hasHammer.toString());
+}
+
+function getPreviousSession() {
+    let hasHammerValue = sessionStorage.getItem(hamer);
+    hasHammer = hasHammerValue === "true";
+    if (hasHammer) {
+        hideHammer();
+    }}

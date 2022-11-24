@@ -85,7 +85,7 @@ p{
 }
 
 #button{
-    position: absolute;
+position: absolute;
    height:70px;
    width: 120px;
    border-color: black;
@@ -106,10 +106,30 @@ p{
 
 #brokenchair{
     position: absolute;
-    width: 180px;
+    width: 200px;
     height: 210px;
     bottom: 60px;
     left: 240px;
+}
+
+#gameover{
+    position:absolute;
+    bottom: 300px;
+    left: 170px;
+    height: 100px;
+    width: 250px;
+    font-size: 0.6cm;
+    background-color: rgb(255, 204, 00);  
+}
+
+#gamefinished{
+    position:absolute;
+    bottom: 300px;
+    left: 170px;
+    height: 100px;
+    width: 250px;
+    font-size: 0.6cm;
+    background-color: rgb(255, 204, 00); 
 }
 
 /* main{
