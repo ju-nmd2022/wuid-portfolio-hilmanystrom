@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+  }
+  
+  .topnav {
+    background-color: white;
+    border: 10px solid white;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  h1 {
+    background-color: #f1b459;
+    color: #ffffff;
+    min-height: 30vh;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin: 20px;
+  }
+  .icon {
+    height: 10vh;
+    width: 20vh;
+    margin: 10px;
+  }
+  .recipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
