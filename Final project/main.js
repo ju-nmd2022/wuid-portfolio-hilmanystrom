@@ -1,18 +1,89 @@
 
-// let modal = document.getElementById("myModal");
-// let button = document.getElementById("myButton");
-// let span = document.getElementById("close")[0];
+const orderButton = document.getElementById("order")
+const orderDetails = document.getElementById("orderDetails")
+// const payButton = document.getElementById("payButton")
+// const finishPage = document.getElementById("finishPage")
 
-// button.onclick = function() {
-//     modal.style.display = "block";
-// }
+let hasOrderDetails = false;
+let hasOrderButton = false;
+hideOrderDetails();
+showOrderButton();
+// hideFinishPage();
 
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
+// let hasPayButton = false;
+// hideFinishPage();
 
-// window.onclick = function() {
-//     if (Event.target == modal) {
-//         modal.style.display = "none";
+
+orderButton.addEventListener("click", function() {
+    if (!hasOrderButton) {
+        hasOrderButton = true;
+        showOrderDetails();
+        hideOrderButton();
+    }
+})
+
+orderDetails.addEventListener("click", function() {
+    if (!hasOrderDetails) {
+    hasOrderDetails = false;
+    showOrderButton();
+    hideOrderDetails();
+   }
+})
+
+orderDetails.addEventListener("click", function() {
+ if (!hasOrderDetails) {
+ hasOrderDetails = true;
+ showOrderDetails();
+ }
+})
+
+// payButton.addEventListener("click", function() {
+//     if (!hasPayButton) {
+//     hasPayButton = false;
+//    showOrderDetails();
+//    hideFinishPage();
 //     }
+// })
+
+// payButton.addEventListener("click", function() {
+//     if (!hasPayButton) {
+//     hasPayButton = true;
+//     showFinishPage();
+//     hideOrderDetails();
+//     }
+// })
+
+
+
+
+function hideOrderDetails() {
+    orderDetails.hidden = true;
+}
+
+function showOrderDetails() {
+    orderDetails.hidden = false
+}
+
+function hideOrderButton() {
+    orderButton.hidden = true;
+}
+
+function showOrderButton() {
+    orderButton.hidden = false;
+}
+
+// function hideFinishPage() {
+//     finishPage.hidden = true;
+// }
+
+// function showFinishPage() {
+//     finishPage.hidden = false;
+// }
+
+// function hidePayButton() {
+//     payButton.hidden = true;
+// }
+
+// function showPayButton() {
+//     payButton.hidden = false;
 // }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    </head>
+
+<body>
+
+    <div id="order">
+    <h2 class="orderbutton">
+        Order here!
+    </h2>
+    </div>
+
+ <div id="orderDetails">
+
+        <h1>Order details</h1>
+        <p class="infoText">
+            Complete your order by filling in your payment details
+        </p>
+        <form action="submit">
+            <label for="emailAdress">Email Adress</label>
+        <input
+           type="email"
+           placeholder="joannasmith@hotmail.com"
+           id="emailAdress"
+           />
+
+        <label for="cardNumber">Card Number</label>
+        <div class="cardNumber">
+          <input type="text" placeholder="Card Number" id="number" />
+          <input type="text" placeholder="MM/YY" id="exDate" />
+          <input type="text" placeholder="CVC" id="cvc" />
+        </div>
+
+        <label for="cardHolder">Card Holder</label>
+          <input
+             type="text"
+             placeholder="First And Last Name"
+             id="cardHolder"
+             />
+
+        <label for="billingAdress">Billing Adress</label>
+        <div class="billingAdress">
+            <input type="text" placeholder="Street" id="street"/>
+            <input type="text" placeholder="City" id="city"/>  
+            <input type="text" placeholder="Zip Code" id="zipCode"/>
+        </div>
+        </form>
+
+        <div class="totalPay">
+            <h2 class="payButton">Total:</h2>
+            <h2 id="totalPrice" class="totalPaymentEuro">€18</h2>
+        </div>
+        <a id="payButton" href="summary.html">
+            <button type="button" class="pay">
+                <p id="payTotalPrice">Pay €18</p>
+            </button></a>
+ </div>
+
+ <div id="finishPage">
+    u have order
+ </div>
+</body>
+</html>
